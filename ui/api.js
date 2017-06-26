@@ -123,7 +123,7 @@ async function stats(request) {
     Stats.failed,
     Stats.processed,
     Stats.enqueued,
-  ]).spread((active, processed, failed, enqueued) => ({
+  ]).spread((active, failed, processed, enqueued) => ({
     processed,
     failed,
     active,
