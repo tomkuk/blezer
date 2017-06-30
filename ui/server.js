@@ -22,9 +22,9 @@ function server(port) {
 
   // API
   app.get('/api/jobs', api.jobs);
-  app.delete('/api/jobs/:status', api.removeJobs);
-  app.get('/api/jobs/:jid', api.job);
+  app.delete('/api/jobs/status/:status', api.removeJobs);
   app.delete('/api/jobs/:jid', api.remove);
+  app.get('/api/jobs/:jid', api.job);
   app.post('/api/jobs/:jid/retry', api.retry);
   app.get('/api/queues', api.all);
   app.post('/api/queues/:name', api.enqueue);
